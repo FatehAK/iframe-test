@@ -11,4 +11,6 @@ passData.addEventListener('click', function () {
     portalFrame.contentWindow.postMessage(JSON.stringify(obj), 'https://react-client-side.netlify.com/');
 });
 
-portalFrame.contentWindow.postMessage('cool', 'https://react-client-side.netlify.com/');
+portalFrame.addEventListener('load', function() {
+    portalFrame.contentWindow.postMessage('cool', 'https://react-client-side.netlify.com/');
+});
